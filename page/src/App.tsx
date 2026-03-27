@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { saveAs } from "file-saver"
+import Icon from "../assets/icon.svg"
 
 const App: React.FC = () => {
     const [text, setText] = useState<string>('');
@@ -43,13 +44,10 @@ const App: React.FC = () => {
     return (
         <div className="min-h-screen bg-slate-50 flex justify-center items-center p-6 font-sans">
             <div className="max-w-md w-full bg-white rounded-2xl shadow-xl border border-slate-100 p-10 text-center transition-all hover:shadow-2xl">
-
                 {/* Header Section */}
                 <header className="mb-8">
                     <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
+                        <img src={Icon} />
                     </div>
                     <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-3">
                         Go Ghost QRCode
@@ -102,8 +100,8 @@ const App: React.FC = () => {
 
                 {/* Footer info */}
                 <footer className="mt-8 pt-6 border-t border-slate-100">
-                    <p className="text-xs text-slate-400 uppercase tracking-widest font-medium">
-                        Fast • Secure • Anonymous
+                    <p className="text-xs text-slate-400 uppercase tracking-widest font-medium hover:animate-pulse">
+                        by <a href="https://github.com/rickferrdev">github/rickferrdev</a>
                     </p>
                 </footer>
             </div>
